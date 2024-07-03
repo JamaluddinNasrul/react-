@@ -3,9 +3,9 @@ import React from 'react'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Data =[
-  {id: 1, namaIcon: 'truck', judulIcon:'pengiriman'},
-  {id: 2, namaIcon: 'dollar-sign', judulIcon:'pembayaran'},
-  {ID: 3, namaIcon: 'shopping-bag', judulIcon:'belanja'},
+  {id: "1", namaIcon: 'truck', judulIcon:'pengiriman'},
+  {id: "2", namaIcon: 'cash', judulIcon:'pembayaran'},
+  {ID: "3", namaIcon: 'shopping', judulIcon:'belanja'},
 
 ];
 
@@ -16,7 +16,7 @@ const Mebelku = () => {
       data={Data}
       horizontal={true}
       renderItem={({item}) => (
-      <TouchableOpacity style={{width:50, marginRight:35}}>
+      <TouchableOpacity style={{width:50, marginRight:35}} key={item.id}>
         <View style={{width:50, height:50, backgroundColor:'gray', borderRadius:10, alignItems:'center', justifyContent:'center'}}>
           <MaterialCommunityIcons name={item.namaIcon} color='white' size={30} />
         </View>
